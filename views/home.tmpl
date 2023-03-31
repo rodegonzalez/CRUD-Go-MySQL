@@ -1,0 +1,77 @@
+{{ define "home" }}
+{{ template "header" }}
+
+<div class="container-fluid p-4">
+    <div class="row">
+
+        <div class="col-4">
+            <div class="card w-100 h-100 d-inline-block">
+                <img class="card-img-top" src="/assets/mysql.png" alt="Mysql image" height="150">
+                <div class="card-body">
+                    <a href="https://www.mysql.com/" target="_blank" class="card-link">Official page</a>
+                    <a href="https://github.com/go-sql-driver/mysql" target="_blank" class="card-link">Used mysql driver</a>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">MySQL Database</h4>
+                    <p class="text-justify">
+                        This crud exercise uses a simple persistent storage with:                      
+                        <ul>
+                            <li>a schema called 'test'</li>
+                            <li>a user/password 'test'/'test'</li>
+                            <li>a table of 'items' with three columns: id, name and description. </li>
+                        </ul>
+                    </p>
+                    <p>Schema, user and table must be already created.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card w-100 h-100 d-inline-block">
+                <img class="card-img-top" src="/assets/golang.png" alt="Golang image" height="150">
+                <div class="card-body">
+                    <a href="https://go.dev/" target="_blank" class="card-link">Official page</a>
+                    <a href="https://gobyexample.com/" target="_blank" class="card-link">Usefull samples</a>                    
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">Go</h4>
+                    <p class="text-justify">
+                        This crud exercise uses a simple http routing, templating and logging. 
+                    </p>
+                    <p>
+                        Images and css files are in /assets folder accessed by <i>http.StripPrefix</i> function.
+                    </p>  
+                    <p>
+                        Once runned, it can be accessed by 'http://localhost:8080' by default.
+                    </p>                                     
+                </div>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card w-100 h-100 d-inline-block">
+                <img class="card-img-top" src="/assets/crud.png" alt="CRUD image" height="150">
+                <div class="card-body">
+                    <a href="/list" class="card-link">List items</a>
+                    <a href="/create" class="card-link">Create new item</a>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">This CRUD exercise</h4>
+                    <p class="text-justify">
+                        Exercise made as a base to create a skeleton for future projects.
+                    </p>
+                    <p>Used tutorials and official pages to get information to achieved this simple exercise.</p>                    
+                    <p>
+                        See configuration section in <i>main.go</i> file for changes in your testing implementation.
+                    </p> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{{ template "footer" }}
+{{ end }}

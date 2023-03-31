@@ -1,0 +1,42 @@
+{{ define "list" }}
+{{ template "header" }}
+
+<div class="card">
+    <div class="card-header">
+        Item List
+    </div>
+    <div class="card-body">       
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                {{ range. }}
+                <tr>
+                    <td>{{.Id}}</td>
+                    <td>{{.Name}}</td>
+                    <td>{{.Description}}</td>
+                    <td>
+                        <a class="btn btn-warning" href="/edit?id={{.Id}}">Edit</a>
+                        <a class="btn btn-danger" href="/delete?id={{.Id}}">Delete</a>
+                    </td>
+                </tr>
+                {{ end }}
+    
+            </tbody>
+        </table>
+    
+    </div>
+    <div class="card-footer text-muted">
+        <a class="btn btn-primary" href="/create">Create new item</a>
+    </div>
+</div>
+
+{{ template "footer" }}
+{{ end }}
