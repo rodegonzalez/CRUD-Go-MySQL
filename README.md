@@ -1,5 +1,5 @@
 # Title
-Simple API CRUD using Go + MySQL
+Simple CRUD using Go + MySQL
 
 # Author
 2023-Rode Gonzalez
